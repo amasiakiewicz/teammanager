@@ -1,0 +1,34 @@
+version: '2'
+services:
+  zookeeper:
+    image: wurstmeister/zookeeper
+    ports:
+      - "2181:2181"
+  kafka:
+    image: wurstmeister/kafka:2.12-2.5.0
+    ports:
+      - "9092:9092"
+    environment:
+      KAFKA_ADVERTISED_HOST_NAME: localhost
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+      KAFKA_CREATE_TOPICS: "TeamCreated:3:1,TeamUpdated:3:1,TeamDeleted:3:1,PlayerCreated:3:1,PlayerTeamChanged:3:1,PlayerDeleted:3:1,PlayerTransferred:3:1,ExchangeRateUpdated:3:1"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+  postgresdb:
+    image: postgres:12.4
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./postgres_init.sql:/docker-entrypoint-initdb.d/postgres_init.sql
+    environment:
+      - POSTGRES_PASSWORD=casino
+  eureka:
+    build: ../eureka
+    ports: 
+     - "8761:8761"
+  gateway:
+    build: ../gateway
+    ports: 
+      - "8762:8762"
+    environment:
+      GATEWAY_EUREKA_CONNECT: eureka:8761
