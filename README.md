@@ -6,6 +6,7 @@ It contains:
 * [transfer](https://github.com/amasiakiewicz/transfer), which is responsible for charging fees and transfering funds.
 * [team](https://github.com/amasiakiewicz/team), which is responsible for handling crud team operations.
 * [player](https://github.com/amasiakiewicz/player), which is responsible for handling crud player operations. 
+* [exchangerate](https://github.com/amasiakiewicz/exchangerate), which serves as exchange rate stub.
 
 All services communicate with each other asynchronously through central event store based on Apache Kafka, which is clustered using Apache Zookeeper. This way can we increase the SLA of the whole eco-system, cause we get rid of synchronous calls and SPOFs. This along with service discovery allows us also to easily scale up.
 
