@@ -101,7 +101,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"name\": \"Atlanta Buyers\",\n\t\"establishedYear\": \"1960\",\n\t\"funds\": \"USD 300000\",\n\t\"headCoach\": \"Mike McCarthy\",\n\t\"stadium\": \"AT&T Stadium\",\n\t\"commissionRate\": \"0.04\"\n}",
+					"raw": "{\n\t\"name\": \"Cincinnati Bengals\",\n\t\"establishedYear\": \"1968\",\n\t\"funds\": \"USD 300000\",\n\t\"headCoach\": \"Zac Taylor\",\n\t\"stadium\": \"Paul Brown Stadium\",\n\t\"commissionRate\": \"0.067\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
