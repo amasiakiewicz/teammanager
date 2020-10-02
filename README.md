@@ -8,7 +8,7 @@ It contains:
 * [player](https://github.com/amasiakiewicz/player), which is responsible for handling crud player operations. 
 * [exchangerate](https://github.com/amasiakiewicz/exchangerate), which serves as exchange rate stub.
 
-All services communicate with each other asynchronously through central event store based on Apache Kafka, which is clustered using Apache Zookeeper. This way can we increase the SLA of the whole eco-system, cause we get rid of synchronous calls and SPOFs. This along with service discovery allows us also to easily scale up.
+All services communicate with each other asynchronously through central event store based on Apache Kafka, which is clustered using Apache Zookeeper. This way we can increase the SLA of the whole eco-system, cause we get rid of synchronous calls and SPOFs. This along with service discovery allows us also to easily scale up.
 
 In order to start managing teams, you need to clone above services as well as this one in one parent directory, build all the services with `./gradlew clean build` fired inside each of service directories and fire docker-compose config file `docker-compose up -d`.
 
