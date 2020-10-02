@@ -7,7 +7,8 @@ It contains:
 * [team](https://github.com/amasiakiewicz/team), which is responsible for handling crud team operations.
 * [player](https://github.com/amasiakiewicz/player), which is responsible for handling crud player operations. 
 
-All services communicate with each other asynchronously through central event store based on Apache Kafka, which is clustered using Apache Zookeeper. 
+All services communicate with each other asynchronously through central event store based on Apache Kafka, which is clustered using Apache Zookeeper. This way can we increase the SLA of the whole eco-system, cause we get rid of synchronous calls and SPOFs. This along with service discovery allows us also to easily scale up.
+
 In order to start managing teams, you need to clone above services as well as this one in one parent directory, build all the services with `./gradlew clean build` fired inside each of service directories and fire docker-compose config file `docker-compose up -d`.
 
 Team manager contains also json config file for Postman, which contains all the available requests. They all point to api gateway.
