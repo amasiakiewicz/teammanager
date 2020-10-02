@@ -1,7 +1,7 @@
 {
 	"info": {
 		"_postman_id": "86c01c26-8ca0-4bb8-8aa6-5c4e5aadf360",
-		"name": "BetBull",
+		"name": "TeamManager",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
@@ -247,7 +247,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"name\": \"Lawrence Guy\",\n\t\"college\": \"Arizona State\",\n\t\"number\": \"93\",\n\"teamId\": \"b254fcf4-6884-4011-969c-319df208612e\",\n\t\"dateOfBirth\": \"1990-03-02\",\n\t\"playStart\": \"2010-08-02\"\n}",
+					"raw": "{\n\t\"name\": \"Lawrence Guy\",\n\t\"college\": \"Arizona State\",\n\t\"number\": \"93\",\n\t\"teamId\": \"b254fcf4-6884-4011-969c-319df208612e\",\n\t\"dateOfBirth\": \"1990-03-02\",\n\t\"playStart\": \"2010-08-02\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
