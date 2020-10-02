@@ -1,0 +1,344 @@
+{
+	"info": {
+		"_postman_id": "86c01c26-8ca0-4bb8-8aa6-5c4e5aadf360",
+		"name": "BetBull",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Charge fee and transfer player",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true,
+					"accept-encoding": true,
+					"connection": true,
+					"user-agent": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"playerId\": \"c454fcf4-6884-4011-969c-319df208612f\",\n\t\"buyerTeamId\": \"b354fcf4-6884-4011-969c-319df208612e\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8762/transfer/teamfees",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8762",
+					"path": [
+						"transfer",
+						"teamfees"
+					]
+				},
+				"description": "Charge fee enpoint request"
+			},
+			"response": []
+		},
+		{
+			"name": "Find teams with ids",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true,
+					"accept-encoding": true,
+					"connection": true,
+					"user-agent": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8762/team/teams?teamIds=b154fcf4-6884-4011-969c-319df208612e,b254fcf4-6884-4011-969c-319df208612e&page=0&size=2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8762",
+					"path": [
+						"team",
+						"teams"
+					],
+					"query": [
+						{
+							"key": "teamIds",
+							"value": "b154fcf4-6884-4011-969c-319df208612e,b254fcf4-6884-4011-969c-319df208612e"
+						},
+						{
+							"key": "page",
+							"value": "0"
+						},
+						{
+							"key": "size",
+							"value": "2"
+						}
+					]
+				},
+				"description": "Listing teams request"
+			},
+			"response": []
+		},
+		{
+			"name": "Create team",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"user-agent": true,
+					"accept-encoding": true,
+					"accept": true,
+					"connection": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Atlanta Buyers\",\n\t\"establishedYear\": \"1960\",\n\t\"funds\": \"USD 300000\",\n\t\"headCoach\": \"Mike McCarthy\",\n\t\"stadium\": \"AT&T Stadium\",\n\t\"commissionRate\": \"0.04\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8762/team/teams",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8762",
+					"path": [
+						"team",
+						"teams"
+					]
+				},
+				"description": "Creating team request"
+			},
+			"response": []
+		},
+		{
+			"name": "Update team",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true,
+					"accept-encoding": true,
+					"connection": true,
+					"user-agent": true
+				}
+			},
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"headCoach\": \"Alan McCoy\",\n\t\"stadium\": \"AT&T Stadium\",\n\t\"commissionRate\": \"0.07\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8762/team/teams/b254fcf4-6884-4011-969c-319df208612e",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8762",
+					"path": [
+						"team",
+						"teams",
+						"b254fcf4-6884-4011-969c-319df208612e"
+					]
+				},
+				"description": "Updating team"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete team",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true,
+					"accept-encoding": true,
+					"connection": true,
+					"user-agent": true
+				}
+			},
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8762/team/teams/a92ac5e8-2226-4a6b-b87e-a0dfc481f51f",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8762",
+					"path": [
+						"team",
+						"teams",
+						"a92ac5e8-2226-4a6b-b87e-a0dfc481f51f"
+					]
+				},
+				"description": "Deleting team"
+			},
+			"response": []
+		},
+		{
+			"name": "Find all players",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true,
+					"accept-encoding": true,
+					"connection": true,
+					"user-agent": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8762/player/players?page=0&size=20",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8762",
+					"path": [
+						"player",
+						"players"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "0"
+						},
+						{
+							"key": "size",
+							"value": "20"
+						}
+					]
+				},
+				"description": "Listing players request"
+			},
+			"response": []
+		},
+		{
+			"name": "Create player",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true,
+					"accept-encoding": true,
+					"connection": true,
+					"user-agent": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Lawrence Guy\",\n\t\"college\": \"Arizona State\",\n\t\"number\": \"93\",\n\"teamId\": \"b254fcf4-6884-4011-969c-319df208612e\",\n\t\"dateOfBirth\": \"1990-03-02\",\n\t\"playStart\": \"2010-08-02\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8762/player/players",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8762",
+					"path": [
+						"player",
+						"players"
+					]
+				},
+				"description": "Creating player request"
+			},
+			"response": []
+		},
+		{
+			"name": "Update player",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true,
+					"accept-encoding": true,
+					"connection": true,
+					"user-agent": true
+				}
+			},
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"college\": \"Alabama\",\n\t\"number\": \"13\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8762/player/players/c454fcf4-6884-4011-969c-319df208612f",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8762",
+					"path": [
+						"player",
+						"players",
+						"c454fcf4-6884-4011-969c-319df208612f"
+					]
+				},
+				"description": "Updating player"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete player",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true,
+					"accept-encoding": true,
+					"connection": true,
+					"user-agent": true
+				}
+			},
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8762/player/players/08d3bb31-2475-4b0b-b9ef-4bf7e129fcff",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8762",
+					"path": [
+						"player",
+						"players",
+						"08d3bb31-2475-4b0b-b9ef-4bf7e129fcff"
+					]
+				},
+				"description": "Deleting player"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
