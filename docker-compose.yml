@@ -72,4 +72,10 @@ services:
       - postgresdb
       - kafka
       - eureka      
+  exchangerate:
+    build: ../exchangerate
+    environment:
+      EXCHANGERATE_KAFKA_CONNECT: kafka:9092
+    depends_on:
+      - kafka
 
