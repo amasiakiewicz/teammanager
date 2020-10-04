@@ -11,7 +11,7 @@ services:
     environment:
       KAFKA_ADVERTISED_HOST_NAME: kafka
       KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
-      KAFKA_CREATE_TOPICS: "TeamCreated:3:1,TeamUpdated:3:1,TeamDeleted:3:1,PlayerCreated:3:1,PlayerTeamChanged:3:1,PlayerDeleted:3:1,PlayerTransferred:3:1,ExchangeRateUpdated:3:1"
+      KAFKA_CREATE_TOPICS: "TeamCreated:3:1,TeamUpdated:3:1,TeamDeleted:3:1,PlayerCreated:3:1,PlayerTeamChanged:3:1,PlayerDeleted:3:1,FeeAndPlayerTransferred:3:1,ExchangeRateUpdated:3:1"
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
     depends_on:

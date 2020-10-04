@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "86c01c26-8ca0-4bb8-8aa6-5c4e5aadf360",
+		"_postman_id": "aecc4cb6-d0fd-44f3-bbcc-f7b6395d6d90",
 		"name": "TeamManager",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -44,7 +44,7 @@
 			"response": []
 		},
 		{
-			"name": "Find teams with ids",
+			"name": "Find teams by players",
 			"protocolProfileBehavior": {
 				"disabledSystemHeaders": {
 					"accept": true,
@@ -57,7 +57,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8762/team/teams?teamIds=b154fcf4-6884-4011-969c-319df208612e,b254fcf4-6884-4011-969c-319df208612e&page=0&size=2",
+					"raw": "http://localhost:8762/team/teams?playerIds=a154fcf4-6884-4011-969c-319df208612e,a554fcf4-6884-4011-969c-319df208612e&page=0&size=2",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -69,8 +69,8 @@
 					],
 					"query": [
 						{
-							"key": "teamIds",
-							"value": "b154fcf4-6884-4011-969c-319df208612e,b254fcf4-6884-4011-969c-319df208612e"
+							"key": "playerIds",
+							"value": "a154fcf4-6884-4011-969c-319df208612e,a554fcf4-6884-4011-969c-319df208612e"
 						},
 						{
 							"key": "page",
