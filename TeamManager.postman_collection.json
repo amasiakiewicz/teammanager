@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "aecc4cb6-d0fd-44f3-bbcc-f7b6395d6d90",
+		"_postman_id": "efc89b38-4de8-43d1-9b44-4ddf77b36cea",
 		"name": "TeamManager",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -247,7 +247,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"name\": \"Lawrence Guy\",\n\t\"college\": \"Arizona State\",\n\t\"number\": \"93\",\n\t\"teamId\": \"b254fcf4-6884-4011-969c-319df208612e\",\n\t\"dateOfBirth\": \"1990-03-02\",\n\t\"playStart\": \"2010-08-02\"\n}",
+					"raw": "{\n\t\"name\": \"Lawrence Guy\",\n\t\"number\": \"93\",\n    \"college\": \"Arizona State\",\n\t\"teamId\": \"b254fcf4-6884-4011-969c-319df208612e\",\n\t\"dateOfBirth\": \"1990-03-02\",\n\t\"playStart\": \"2010-08-02\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -285,7 +285,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"college\": \"Alabama\",\n\t\"number\": \"13\"\n}",
+					"raw": "{\n    \"number\": \"13\",\n\t\"college\": \"Alabama\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
